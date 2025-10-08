@@ -40,6 +40,7 @@ def extract_data():
         year = data.find('span', class_='year').text.strip()
         price = data.find('div', class_='offer__price').text.strip()
         city = data.find('dd', class_='value').text.strip()
+        generation = kuzov = engine = probeg = transmission = privod = wheel = rastamozhka = None
         generation1 = data.find('dt', class_='value-title', title='Поколение')
         if generation1:
             generation = generation1.find_next_sibling('dd').text.strip()
